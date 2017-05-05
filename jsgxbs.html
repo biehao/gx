@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+		<style type="text/css">
+			#div div{
+				width: 48px;
+				height: 48px;
+				position: absolute;
+				left: 0;
+				top: 0;
+				margin: 1px;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div"></div>
+		<script>
+			var div = document.getElementById("div");
+			var a = "";
+			var L = 0;
+			var T = 0;
+			var src=["yellow","red","pink","blue"];
+			for( var i = 0;i<100;i++){
+				L = (i%10)*50;
+				T = ( Math.floor(i/10))*50;
+				a += '<div style="left:'+L+'px;top:'+T+'px;background:'+src[i%4]+';">'+(i+1)+'</div>'
+			};
+			div.innerHTML=a;
+		</script>
+	</body>
+</html>
